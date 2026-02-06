@@ -1,13 +1,13 @@
 import HeaderBox from "@/components/HeaderBox";
+import RightSidebar from "@/components/RightSidebar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
-import React from "react";
 
 const Home = () => {
   const loggedIn = { firstName: "g" };
   return (
-    <section className="no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll">
-      <div className="no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll">
-        <header className="flex flex-col justify-between gap-8">
+    <section className="flex w-full flex-col gap-8">
+      <div className="grid w-full grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_360px]">
+        <header className="flex flex-col justify-between gap-6">
           <HeaderBox
             type="greeting"
             title="Welcome"
@@ -16,10 +16,12 @@ const Home = () => {
           />
           <TotalBalanceBox
             accounts={[]}
-            totalBanks={1}
-            totalCurrentBalance={1250}
+            totalBanks={2}
+            totalCurrentBalance={2500}
           />
         </header>
+
+        <RightSidebar user={loggedIn} transactions={[]} banks={[]} />
       </div>
     </section>
   );

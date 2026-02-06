@@ -156,7 +156,7 @@ declare interface HeaderBoxProps {
 }
 
 declare interface MobileNavProps {
-  user: User;
+  user?: User;
 }
 
 declare interface PageHeaderProps {
@@ -218,8 +218,8 @@ declare interface RightSidebarProps {
   banks: Bank[] & Account[];
 }
 
-declare interface SiderbarProps {
-  user: User;
+declare interface SidebarProps {
+  user?: User;
 }
 
 declare interface RecentTransactionsProps {
